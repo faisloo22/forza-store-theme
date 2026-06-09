@@ -1,5 +1,62 @@
 {% extends "layouts.master" %}
 {% block content %}
+
+    {# كود الـ CSS السحري لقلب الصفحة لستايل قايمر مظلم وعصري #}
+    <style>
+        /* الخلفية العامة والنصوص */
+        body, html, main, .bg-gray-50, #app {
+            background-color: #0b0c10 !important;
+            color: #e0e0e0 !important;
+        }
+
+        /* تعديل القائمة الجانبية (Sidebar) */
+        nav[aria-label="Sidebar"], .sidebar {
+            background-color: #1a1c23 !important; /* رمادي غامق فخم */
+            border: 1px solid #8a2be2 !important; /* إطار نيون بنفسجي */
+            border-radius: 12px !important;
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.2) !important;
+        }
+
+        /* تعديل النصوص داخل القائمة الجانبية */
+        .sidebar a, .sidebar span, salla-user-menu {
+            color: #ffffff !important;
+        }
+
+        /* العناوين الرئيسية */
+        h1, h2, h3, .main-content h1 {
+            color: #ffffff !important;
+            text-shadow: 0 0 8px rgba(69, 243, 255, 0.6); /* توهج نيون أزرق خفيف */
+        }
+
+        /* حقول الإدخال والـ Inputs داخل الحساب */
+        input, select, textarea, .s-form-control {
+            background-color: #11141a !important;
+            color: #ffffff !important;
+            border: 1px solid #3f4257 !important;
+            border-radius: 8px !important;
+        }
+
+        input:focus, .s-form-control:focus {
+            border-color: #45f3ff !important; /* نيون عند الضغط */
+            box-shadow: 0 0 10px rgba(69, 243, 255, 0.4) !important;
+        }
+
+        /* أزرار الحفظ والتعديل */
+        .btn-submit, .s-button-primary, salla-button {
+            background: linear-gradient(135deg, #8a2be2, #45f3ff) !important; /* تدرج الألعاب */
+            color: #ffffff !important;
+            border: none !important;
+            font-weight: bold !important;
+            border-radius: 25px !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .btn-submit:hover, .s-button-primary:hover {
+            box-shadow: 0 0 15px rgba(69, 243, 255, 0.6) !important;
+            transform: scale(1.02);
+        }
+    </style>
+
     <div class="profile-header gradient-bg">
         <div class="container relative flex justify-between h-full items-center">
             {# add breadcumbs container in pages to make a space in case breadcrumbs is off #}
